@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - The Foodie Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            color: #ff6347;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto; /* Ensure the image maintains its aspect ratio */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.6rem;
+            color: #ff6347;
+            margin: 1rem 0;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff6347;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff6347;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .menu-item a:hover {
+            background-color: #ff6347;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background: url('https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/diy-food-background.jpg"></body>
+
+    <header>
+        <h1  style="background-color: black"; >Our Menu</h1>
+    </header>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/originals/71/d6/db/71d6db959ed3f8e47e7ef8ccbf74ea7f.jpg" alt="Maggie">
+            <h3>Maggie</h3>
+            <p>Delicious varieties of Maggie for every craving.</p>
+            <a href="maggie.html">If you love it!! <br> Click me for more info!!</a>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://www.godubrovnik.com/wp-content/uploads/pizza.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Freshly baked pizza with your favorite toppings.</p>
+            <a href="pizza.html">If you love it!! <br> Click me for more info!!</a>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.hkwY7ecsdjFUQLwrzeRh_gHaHa?rs=1&pid=ImgDetMain" alt="Garlic Bread">
+            <h3>Garlic Bread</h3>
+            <p style="font-size: 20px;">Perfectly toasted garlic bread with herbs.</p>
+            <a href="garlic-bread.html">If you love it!! <br> Click me for more info!!</a>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://api.lagyan.com/images/story/bun%20maska.jpeg" alt="Maska Bun">
+            <h3>Maska Bun</h3>
+            <p>Soft buns with creamy butter spreads.</p>
+            <a href="maska-bun.html">If you love it!! <br> Click me for more info!!</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maska Bun - Bistro Bliss</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            color: #ff6347;
+            margin-top: 1rem;
+        }
+
+        .description {
+            margin: 2rem auto;
+            max-width: 600px;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .content-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .content-box h2 {
+            color: #ff6347;
+            font-size: 1.5rem;
+        }
+
+        .content-box p {
+            color: #555;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #ff4a33;
+        }
+
+        .order-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .order-form select, .order-form input[type="number"] {
+            padding: 0.8rem;
+            margin: 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .order-form button {
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: #ff6347;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #ff4a33;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maska Bun Varieties</h1>
+    <p class="description">
+        Discover our delightful Maska Bun varieties. Choose your favorite and place your order below.
+    </p>
+
+    <div class="content-boxes">
+        <div class="content-box">
+            <h2>Classic Maska Bun</h2>
+            <p>Simple yet satisfying with a generous spread of butter. <br> ₹30</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Cheese Maska Bun</h2>
+            <p>Creamy cheese melted perfectly on a buttery bun. <br> ₹45</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Spicy Maska Bun</h2>
+            <p>A fiery twist to your favorite buttered bun.<br> ₹45</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Garlic Maska Bun</h2>
+            <p>Flavored with rich garlic butter for a savory delight. <br> ₹50</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Herb Maska Bun</h2>
+            <p>Aromatic herbs blended into soft butter for a gourmet touch.<br> ₹50</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Sweet Maska Bun</h2>
+            <p>Drizzled with honey or jam for a sweet and buttery treat. <br> ₹55</p>
+        </div>
+    </div>
+
+    <div class="order-box">
+        <h3>Place Your Order</h3>
+        <div class="order-form">
+            <form id="order-form">
+                <label for="bun-type">Select Maska Bun Type:</label>
+                <select id="bun-type" name="bun-type" required>
+                    <option value="classic">Classic Maska Bun</option>
+                    <option value="cheese">Cheese Maska Bun</option>
+                    <option value="spicy">Spicy Maska Bun</option>
+                    <option value="garlic">Garlic Maska Bun</option>
+                    <option value="herb">Herb Maska Bun</option>
+                    <option value="sweet">Sweet Maska Bun</option>
+                </select>
+
+                <label for="quantity">Enter Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="menu.html" class="back-link">Back to Menu</a>
+
+    <script>
+        document.getElementById("order-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            var bunType = document.getElementById("bun-type").value;
+            var quantity = document.getElementById("quantity").value;
+
+            alert(`Thank you for your order of ${quantity} ${bunType} Maska Bun! Your order is being processed.`);
+            document.getElementById("order-form").reset(); // Optionally reset the form
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Varieties - The Foodie Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            color: #ff6347;
+            margin-top: 1rem;
+        }
+
+        .description {
+            margin: 2rem auto;
+            max-width: 600px;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .content-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .content-box h2 {
+            color: #ff6347;
+            font-size: 1.5rem;
+        }
+
+        .content-box p {
+            color: #555;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #ff4a33;
+        }
+
+        .order-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .order-form select, .order-form input[type="number"] {
+            padding: 0.8rem;
+            margin: 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .order-form button {
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: #ff6347;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #ff4a33;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizza Varieties</h1>
+    <p class="description">
+        Explore our mouthwatering Pizza varieties. Choose your favorite and place your order below.
+    </p>
+
+    <div class="content-boxes">
+        <div class="content-box">
+            <h2>Margherita Pizza</h2>
+            <p>Classic pizza with fresh mozzarella, basil, and tomato sauce. <br> ₹190</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Pepperoni Pizza</h2>
+            <p>Loaded with spicy pepperoni slices and gooey cheese.<br> ₹200</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Veggie Delight Pizza</h2>
+            <p>A colorful mix of fresh vegetables on a cheesy base.<br> ₹220</p>
+        </div>
+
+        <div class="content-box">
+            <h2>BBQ Chicken Pizza</h2>
+            <p>Grilled chicken, BBQ sauce, and red onions for a smoky flavor.<br> ₹270</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Hawaiian Pizza</h2>
+            <p>A sweet and savory combo of pineapple and ham.<br> ₹260</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Four Cheese Pizza</h2>
+            <p>A rich blend of mozzarella, cheddar, parmesan, and blue cheese.<br> ₹280</p>
+        </div>
+    </div>
+
+    <div class="order-box">
+        <h3>Place Your Order</h3>
+        <div class="order-form">
+            <form id="order-form">
+                <label for="pizza-type">Select Pizza Type:</label>
+                <select id="pizza-type" name="pizza-type" required>
+                    <option value="margherita">Margherita Pizza</option>
+                    <option value="pepperoni">Pepperoni Pizza</option>
+                    <option value="veggie">Veggie Delight Pizza</option>
+                    <option value="bbq-chicken">BBQ Chicken Pizza</option>
+                    <option value="hawaiian">Hawaiian Pizza</option>
+                    <option value="four-cheese">Four Cheese Pizza</option>
+                </select>
+
+                <label for="quantity">Enter Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="menu.html" class="back-link">Back to Menu</a>
+
+    <script>
+        document.getElementById("order-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            var pizzaType = document.getElementById("pizza-type").value;
+            var quantity = document.getElementById("quantity").value;
+
+            alert(`Thank you for your order of ${quantity} ${pizzaType} Pizza! Your order is being processed.`);
+            document.getElementById("order-form").reset(); // Optionally reset the form
+        });
+    </script>
+</body>
+</html>

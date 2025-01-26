@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garlic Bread - The Foodie Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            color: #ff6347;
+            margin-top: 1rem;
+        }
+
+        .description {
+            margin: 2rem auto;
+            max-width: 600px;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .content-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .content-box h2 {
+            color: #ff6347;
+            font-size: 1.5rem;
+        }
+
+        .content-box p {
+            color: #555;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #ff4a33;
+        }
+
+        .order-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .order-form select, .order-form input[type="number"] {
+            padding: 0.8rem;
+            margin: 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .order-form button {
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: #ff6347;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #ff4a33;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Garlic Bread Varieties</h1>
+    <p class="description">
+        Discover our delicious Garlic Bread varieties. Choose your favorite and place your order below.
+    </p>
+
+    <div class="content-boxes">
+        <div class="content-box">
+            <h2>Classic Garlic Bread</h2>
+            <p>Golden-brown bread infused with garlic butter.<br> ₹80</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Cheese Garlic Bread</h2>
+            <p>Melted cheese on top of crispy, buttery garlic bread.<br> ₹90</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Spicy Garlic Bread</h2>
+            <p>A zesty twist with chili flakes and garlic butter.<br> ₹100</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Herb Garlic Bread</h2>
+            <p>Infused with aromatic herbs and fresh garlic butter.<br> ₹100</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Stuffed Garlic Bread</h2>
+            <p>Filled with cheese and herbs for a satisfying bite.<br> ₹120</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Sweet Garlic Bread</h2>
+            <p>A unique blend of garlic butter and a hint of sweetness.<br> ₹90</p>
+        </div>
+    </div>
+
+    <div class="order-box">
+        <h3>Place Your Order</h3>
+        <div class="order-form">
+            <form id="order-form">
+                <label for="bread-type">Select Garlic Bread Type:</label>
+                <select id="bread-type" name="bread-type" required>
+                    <option value="classic">Classic Garlic Bread</option>
+                    <option value="cheese">Cheese Garlic Bread</option>
+                    <option value="spicy">Spicy Garlic Bread</option>
+                    <option value="herb">Herb Garlic Bread</option>
+                    <option value="stuffed">Stuffed Garlic Bread</option>
+                    <option value="sweet">Sweet Garlic Bread</option>
+                </select>
+
+                <label for="quantity">Enter Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="menu.html" class="back-link">Back to Menu</a>
+
+    <script>
+        document.getElementById("order-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            var breadType = document.getElementById("bread-type").value;
+            var quantity = document.getElementById("quantity").value;
+
+            alert(`Thank you for your order of ${quantity} ${breadType} Garlic Bread! Your order is being processed.`);
+            document.getElementById("order-form").reset(); // Optionally reset the form
+        });
+    </script>
+</body>
+</html>
